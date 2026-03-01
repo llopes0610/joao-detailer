@@ -1,15 +1,15 @@
 export default function Reviews() {
   const reviews = [
     {
-      name: "Cliente Satisfeito",
+      name: "Lucas Lopes",
       text: "Excelente atendimento e acabamento impecável. Meu carro ficou com brilho de zero!",
     },
     {
-      name: "Carlos M.",
+      name: "Carlos",
       text: "Profissional extremamente cuidadoso. Recomendo para quem busca estética automotiva em Praia Grande.",
     },
     {
-      name: "Fernanda R.",
+      name: "Fernanda",
       text: "A vitrificação ficou perfeita. Atendimento rápido e muito profissional.",
     },
   ];
