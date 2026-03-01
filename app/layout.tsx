@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://joaopaulodetailer.com.br"),
+
   title: "João Paulo Detailer | Estética Automotiva em Praia Grande - SP",
   description:
     "Estética automotiva em Praia Grande - SP especializada em polimento técnico, vitrificação automotiva e detalhamento completo. Atendimento para toda a Baixada Santista.",
+
   keywords: [
     "estética automotiva em Praia Grande",
     "polimento automotivo Praia Grande",
@@ -23,6 +26,7 @@ export const metadata: Metadata = {
     "detalhamento automotivo Baixada Santista",
     "João Paulo Detailer",
   ],
+
   openGraph: {
     title: "João Paulo Detailer | Estética Automotiva em Praia Grande - SP",
     description:
@@ -31,14 +35,30 @@ export const metadata: Metadata = {
     siteName: "João Paulo Detailer",
     locale: "pt_BR",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "João Paulo Detailer - Estética Automotiva em Praia Grande",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "João Paulo Detailer | Estética Automotiva",
+    description:
+      "Estética automotiva premium em Praia Grande - SP.",
+    images: ["/og-image.jpg"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="pt-BR">
       <body
@@ -52,7 +72,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "AutomotiveBusiness",
               name: "João Paulo Detailer",
-              image: "https://joaopaulodetailer.com.br/logo-jpd-sport.svg",
+              image:
+                "https://joaopaulodetailer.com.br/og-image.jpg",
               url: "https://joaopaulodetailer.com.br",
               telephone: "+55 13 99626-3054",
               address: {
