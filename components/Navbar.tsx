@@ -9,16 +9,17 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/60 border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/50 border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
 
-          {/* Logo */}
+          {/* Logo menor no mobile */}
           <Image
             src="/logo-jpd-sport.svg"
             alt="João Paulo Detailer"
-            width={160}
-            height={50}
+            width={130}
+            height={40}
             priority
+            className="md:w-[160px]"
           />
 
           {/* Desktop Menu */}
@@ -47,69 +48,43 @@ export default function Navbar() {
             className="md:hidden text-white"
             onClick={() => setOpen(true)}
           >
-            <Menu size={30} />
+            <Menu size={26} />
           </button>
         </div>
       </header>
 
-      {/* MOBILE FULL SCREEN MENU */}
-      <div
-        className={`fixed inset-0 bg-black/95 backdrop-blur-xl z-50 transform transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {/* Close */}
-        <div className="flex justify-between items-center px-6 py-6">
-          <Image
-            src="/logo-jpd-sport.svg"
-            alt="João Paulo Detailer"
-            width={150}
-            height={50}
-          />
+      {/* MOBILE MENU */}
+      {open && (
+        <div className="fixed inset-0 bg-black/95 backdrop-blur-xl z-50 flex flex-col items-center justify-center space-y-8 text-white text-xl font-semibold">
+
           <button
             onClick={() => setOpen(false)}
-            className="text-white"
+            className="absolute top-6 right-6"
           >
-            <X size={32} />
+            <X size={30} />
           </button>
-        </div>
 
-        {/* Menu Items */}
-        <div className="flex flex-col items-center justify-center h-[70%] space-y-8 text-2xl font-bold text-white">
-
-          <a
-            href="#servicos"
-            onClick={() => setOpen(false)}
-            className="hover:text-primary transition"
-          >
+          <a href="#servicos" onClick={() => setOpen(false)}>
             Serviços
           </a>
 
-          <a
-            href="#avaliacoes"
-            onClick={() => setOpen(false)}
-            className="hover:text-primary transition"
-          >
+          <a href="#avaliacoes" onClick={() => setOpen(false)}>
             Avaliações
           </a>
 
-          <a
-            href="#contato"
-            onClick={() => setOpen(false)}
-            className="hover:text-primary transition"
-          >
+          <a href="#contato" onClick={() => setOpen(false)}>
             Contato
           </a>
 
           <a
             href="https://wa.me/5513996263054"
             target="_blank"
-            className="mt-6 bg-primary px-8 py-4 rounded-full text-white text-lg"
+            className="bg-primary px-8 py-4 rounded-full text-white"
           >
             Solicitar Orçamento
           </a>
         </div>
-      </div>
+      )}
     </>
   );
 }
