@@ -6,6 +6,7 @@ import Differentials from "@/components/Differentials";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import ExitPopup from "@/components/ExitPopup";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <FinalCTA />
       <Footer />
       <WhatsAppButton />
+      <ExitPopup />
     </>
   );
 }
