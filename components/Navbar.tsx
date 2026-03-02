@@ -33,6 +33,9 @@ export default function Navbar() {
             <a href="#contato" className="hover:text-primary transition">
               Contato
             </a>
+            <a href="/galeria" className="hover:text-primary transition">
+  Galeria
+</a>
 
             <a
               href="https://wa.me/5513996263054"

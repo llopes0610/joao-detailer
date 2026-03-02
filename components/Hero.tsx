@@ -27,7 +27,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative w-full h-screen pt-[90px] overflow-hidden">
+    <section className="relative w-full h-screen pt-[70px] overflow-hidden">
 
       {/* SWIPER */}
       <Swiper
@@ -44,19 +44,20 @@ export default function Hero() {
           <SwiperSlide key={index}>
             <div className="relative w-full h-full overflow-hidden group">
 
-              {/* IMAGEM COM ZOOM SUAVE */}
+              {/* IMAGEM MAIS VIVA */}
               <Image
                 src={img}
                 alt="Estética automotiva em Praia Grande - João Paulo Detailer"
                 fill
                 priority={index === 0}
                 sizes="100vw"
-                quality={85}
-                className="object-cover transition-transform duration-[7000ms] ease-out group-hover:scale-105"
+                quality={90}
+                className="object-cover brightness-110 contrast-110 transition-transform duration-[7000ms] ease-out group-hover:scale-105"
               />
 
-              {/* OVERLAY CINEMATOGRÁFICO */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/95" />
+              {/* OVERLAY PROFISSIONAL EQUILIBRADO */}
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.3),rgba(0,0,0,0.6))]" />
 
             </div>
           </SwiperSlide>
@@ -117,7 +118,7 @@ export default function Hero() {
 
           </div>
 
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-300">
             Atendimento em Praia Grande e toda a região da Baixada Santista
           </p>
 
