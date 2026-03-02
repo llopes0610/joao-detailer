@@ -25,31 +25,30 @@ export default function Galeria() {
         </div>
 
         {/* GRID ESPORTIVO */}
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
 
-          {images.map((img, index) => (
-            <div
-              key={index}
-              onClick={() => setSelected(img)}
-              className="relative overflow-hidden rounded-xl cursor-pointer group break-inside-avoid"
-            >
-              <Image
-                src={img}
-                alt={`Trabalho ${index + 1} - João Paulo Detailer`}
-                width={600}
-                height={600}
-                className="w-full h-auto object-cover group-hover:scale-110 transition duration-700 brightness-110 contrast-110"
-              />
+  {images.map((img, index) => (
+    <div
+      key={index}
+      onClick={() => setSelected(img)}
+      className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
+    >
+      <Image
+        src={img}
+        alt={`Trabalho ${index + 1} - João Paulo Detailer`}
+        fill
+        className="object-cover group-hover:scale-110 transition duration-700 brightness-110 contrast-110"
+      />
 
-              {/* OVERLAY ESPORTIVO */}
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition" />
 
-              {/* BORDA LARANJA HOVER */}
-              <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary transition duration-500 rounded-xl" />
-            </div>
-          ))}
+      {/* Borda esportiva */}
+      <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary transition duration-500 rounded-xl" />
+    </div>
+  ))}
 
-        </div>
+</div>
 
         {/* CTA FINAL */}
         <div className="mt-28 text-center">
