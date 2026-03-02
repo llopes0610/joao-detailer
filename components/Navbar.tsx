@@ -79,8 +79,8 @@ export default function Navbar() {
                         Contato
                     </a>
 
-                    <a href="#contato" onClick={() => setOpen(false)}>
-                        Galteria
+                    <a href="/galeria" onClick={() => setOpen(false)}>
+                        Galeria
                     </a>
 
                     <a

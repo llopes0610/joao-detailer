@@ -55,16 +55,15 @@ export default function Hero() {
                 className="object-cover brightness-110 contrast-110 transition-transform duration-[7000ms] ease-out group-hover:scale-105"
               />
 
-              {/* OVERLAY PROFISSIONAL EQUILIBRADO */}
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.3),rgba(0,0,0,0.6))]" />
+              {/* OVERLAY LATERAL (não apaga o carro) */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
 
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* SETAS CUSTOM PREMIUM */}
+      {/* SETAS CUSTOM */}
       <div className="absolute inset-0 flex items-center justify-between px-6 md:px-16 z-20 pointer-events-none">
 
         <button
@@ -83,47 +82,52 @@ export default function Hero() {
 
       </div>
 
-      {/* CONTEÚDO CENTRAL */}
-      <div className="absolute inset-0 flex items-center justify-center text-center px-6 z-10">
-        <div className="max-w-3xl text-white space-y-8">
+      {/* CONTEÚDO LATERAL PREMIUM */}
+      <div className="absolute inset-0 flex items-center z-10">
+        <div className="max-w-6xl mx-auto w-full px-6 md:px-12">
 
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-2xl">
-            Estética Automotiva em
-            <span className="text-primary block mt-2">
-              Praia Grande - SP
-            </span>
-          </h1>
+          <div className="max-w-xl text-white space-y-8">
 
-          <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-            Polimento técnico, vitrificação e detalhamento automotivo
-            premium para toda a Baixada Santista.
-          </p>
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+              Estética Automotiva em
+              <span className="text-primary block mt-2">
+                Praia Grande - SP
+              </span>
+            </h1>
 
-          <div className="flex flex-col md:flex-row gap-5 justify-center">
+            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+              Polimento técnico, vitrificação e detalhamento automotivo
+              premium para toda a Baixada Santista.
+            </p>
 
-            <a
-              href="https://wa.me/5513996263054"
-              target="_blank"
-              className="bg-primary hover:brightness-110 transition text-white font-semibold px-10 py-5 rounded-full text-lg shadow-2xl shadow-orange-500/40"
-            >
-              Solicitar Orçamento Agora
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4">
 
-            <a
-              href="#servicos"
-              className="border border-white/40 px-10 py-5 rounded-full hover:bg-white hover:text-black transition text-lg backdrop-blur-sm"
-            >
-              Ver Serviços
-            </a>
+              <a
+                href="https://wa.me/5513996263054"
+                target="_blank"
+                className="bg-primary hover:brightness-110 transition text-white font-semibold px-8 py-4 rounded-full text-lg shadow-2xl shadow-orange-500/40"
+              >
+                Solicitar Orçamento
+              </a>
+
+              <a
+                href="#servicos"
+                className="border border-white/40 px-8 py-4 rounded-full hover:bg-white hover:text-black transition"
+              >
+                Ver Serviços
+              </a>
+
+            </div>
+
+            <p className="text-sm text-gray-300">
+              Atendimento em Praia Grande e toda a região da Baixada Santista
+            </p>
 
           </div>
 
-          <p className="text-sm text-gray-300">
-            Atendimento em Praia Grande e toda a região da Baixada Santista
-          </p>
-
         </div>
       </div>
+
     </section>
   );
 }
